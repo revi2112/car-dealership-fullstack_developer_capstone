@@ -1,8 +1,6 @@
-from django.shortcuts import render
 from django.contrib.auth.models import User
 from django.contrib.auth import logout, login, authenticate
 from django.http import JsonResponse
-from django.contrib.auth import login, authenticate
 from django.views.decorators.csrf import csrf_exempt
 import logging
 import json
@@ -118,3 +116,4 @@ def add_review(request):
         logger.exception("Error in posting review")
         return JsonResponse(
             {"status": 401, "message": "Error in posting review"})
+        
