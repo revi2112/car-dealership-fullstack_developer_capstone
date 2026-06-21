@@ -116,4 +116,3 @@ def add_review(request):
         logger.exception("Error in posting review")
         return JsonResponse(
             {"status": 401, "message": "Error in posting review"})
-        
